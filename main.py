@@ -1,9 +1,9 @@
 import random
 
-run = True
+run = "begin"
 cScore = 0
 uScore = 0
-while run:
+while run=="begin":
     comp = random.randint(1, 3)
 
     print("1 : Rock")
@@ -77,7 +77,7 @@ while run:
 
 
     elif user == 4:
-        run = False
+        run = "quit"
         print("\nFinal Score")
         print("Your Score : ",uScore)
         print("Comp Score : ",cScore)
