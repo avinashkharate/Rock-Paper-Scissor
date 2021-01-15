@@ -1,6 +1,8 @@
 import random
 
 run = True
+cScore = 0
+uScore = 0
 while run:
     comp = random.randint(1, 3)
 
@@ -20,12 +22,17 @@ while run:
 
         elif comp == 2:
             print("Comp Choice : Paper")
-            print("Alas !!! Lost\n")
+            print("Alas !!! You Lost\n")
+            cScore = cScore+1
 
         elif comp == 3:
             print("Comp Choice : Scissor")
             print("Congo !!! You Won\n")
-        print("Play Again !")
+            uScore = uScore+1
+        
+        print("Your Score : ",uScore)
+        print("Comp Score : ",cScore)
+        print("\nPlay Again !")
 
 
     elif user == 2:
@@ -33,6 +40,7 @@ while run:
         if comp == 1:
             print("Comp Choice : Rock")
             print("Congo !!! You Won\n")
+            uScore = uScore+1
 
         elif comp == 2:
             print("Comp Choice : Paper")
@@ -40,29 +48,40 @@ while run:
 
         elif comp == 3:
             print("Comp Choice : Scissor")
-            print("Alas !!! Lost\n")
-        print("Play Again !")
+            print("Alas !!! You Lost\n")
+            cScore = cScore+1
+
+        print("Your Score : ",uScore)
+        print("Comp Score : ",cScore)
+        print("\nPlay Again !")
 
 
     elif user == 3:
         print("Your Choice : Scissor")
         if comp == 1:
             print("Comp Choice : Rock")
-            print("Alas !!! Lost\n")
+            print("Alas !!! You Lost\n")
+            cScore = cScore+1
 
         elif comp == 2:
             print("Comp Choice : Paper")
             print("Congo !!! You Won\n")
+            uScore = uScore+1
 
         elif comp == 3:
             print("Comp Choice : Scissor")
             print("Its A Tie !!!\n")
-        print("Play Again !")
+        print("Your Score : ",uScore)
+        print("Comp Score : ",cScore)
+        print("\nPlay Again !")
 
 
     elif user == 4:
         run = False
-        print("Thanks For Playing\n")
+        print("\nFinal Score")
+        print("Your Score : ",uScore)
+        print("Comp Score : ",cScore)
+        print("\nThanks For Playing\n")
 
     else:
         print("Invalid Number")
