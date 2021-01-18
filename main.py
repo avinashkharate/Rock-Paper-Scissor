@@ -84,4 +84,4 @@ while run:
         print("\nThanks For Playing\n")
 
     else:
-        print("Invalid Number")
+        print(" U entered a Invalid Number")
